@@ -1,0 +1,113 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  STUDENT
+  MENTOR
+  HOD
+  SECURITY
+  PENDING  // For users who haven't been assigned a role yet
+}
+
+enum GatePassStatus {
+  PENDING
+  APPROVED
+  REJECTED
+  ESCALATED
+  UTILIZED
+}
+
+model User {
+  id              String   @id @default(uuid())
+  email           String   @unique
+  name            String
+  role            Role?    // Made optional so users can be created without a role
+  mobile          String?  // User's mobile number
+  parentMobile    String?  // Parent's mobile number (for students)
+  createdAt       DateTime @default(now())
+
+  gatePasses      GatePass[]       @relation("StudentGatePasses")
+  passesToReview  GatePass[]       @relation("MentorGatePasses")
+  students        StudentMentor[]  @relation("MentorMap")
+  mentors         StudentMentor[]  @relation("StudentMap")
+  
+  // Notification relationships
+  notifications   Notification[]   @relation("UserNotifications")
+  resolvedNotifications Notification[] @relation("ResolvedNotifications")
+}
+
+model GatePass {
+  id             String         @id @default(uuid())
+  reason         String
+  status         GatePassStatus @default(PENDING)
+  appliedAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+
+  qrToken        String?        @unique
+  qrValid        Boolean        @default(false)
+  qrGeneratedAt  DateTime?
+  scannedAt      DateTime?
+
+  student        User           @relation("StudentGatePasses", fields: [studentId], references: [id], onDelete: Cascade)
+  studentId      String
+
+  mentor         User           @relation("MentorGatePasses", fields: [mentorId], references: [id], onDelete: Cascade)
+  mentorId       String
+}
+
+model StudentMentor {
+  id         String   @id @default(uuid())
+
+  student    User     @relation("StudentMap", fields: [studentId], references: [id])
+  studentId  String
+
+  mentor     User     @relation("MentorMap", fields: [mentorId], references: [id])
+  mentorId   String
+
+  @@unique([studentId])
+}
+
+enum NotificationType {
+  ROLE_REQUEST
+  MENTOR_ASSIGNMENT
+  ROLE_CHANGE
+}
+
+enum NotificationStatus {
+  PENDING
+  RESOLVED
+  DISMISSED
+}
+
+model Notification {
+  id          String             @id @default(uuid())
+  type        NotificationType
+  status      NotificationStatus @default(PENDING)
+  title       String
+  message     String
+  data        String?           // JSON data for additional context
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+  resolvedAt  DateTime?
+
+  // User who created the notification (requester)
+  user        User              @relation("UserNotifications", fields: [userId], references: [id], onDelete: Cascade)
+  userId      String
+
+  // Admin who resolved the notification
+  resolvedBy  User?             @relation("ResolvedNotifications", fields: [resolvedById], references: [id])
+  resolvedById String?
+}
+
+model BulkImport {
+  id        String   @id @default(uuid())
+  filename  String
+  userIds   String   // JSON string of user IDs created/updated in this batch
+  createdAt DateTime @default(now())
+}

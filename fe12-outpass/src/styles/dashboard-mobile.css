@@ -1,0 +1,359 @@
+/* Premium Dashboard & Admin Panel Mobile Styles */
+
+/* Dashboard Layout Enhancements */
+@media (max-width: 767.98px) {
+  /* Dashboard containers */
+  .dashboard-container {
+    padding: 1rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    min-height: calc(100vh - 72px);
+  }
+
+  /* Dashboard header */
+  .dashboard-header {
+    background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+    border-radius: 24px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .dashboard-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
+  }
+
+  .dashboard-header h1 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  .dashboard-header p {
+    color: #6b7280;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  /* Stats cards grid */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .stat-card {
+    background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
+  }
+
+  .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--card-gradient, linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%));
+  }
+
+  .stat-card.success::before {
+    --card-gradient: linear-gradient(90deg, #10b981 0%, #059669 100%);
+  }
+
+  .stat-card.warning::before {
+    --card-gradient: linear-gradient(90deg, #f59e0b 0%, #d97706 100%);
+  }
+
+  .stat-card.danger::before {
+    --card-gradient: linear-gradient(90deg, #ef4444 0%, #dc2626 100%);
+  }
+
+  .stat-card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+  }
+
+  .stat-card-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1f2937;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  .stat-card-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #6b7280;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .stat-card-change {
+    font-size: 0.875rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .stat-card-change.positive {
+    color: #059669;
+  }
+
+  .stat-card-change.negative {
+    color: #dc2626;
+  }
+
+  /* Admin Panel Navigation */
+  .admin-nav-mobile {
+    background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+    border-radius: 24px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+    margin-bottom: 2rem;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+  }
+
+  .admin-nav-mobile .nav-pills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+  }
+
+  .admin-nav-mobile .nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100px;
+    padding: 1.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+    background: linear-gradient(145deg, #f8fafc 0%, #f1f5f9 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .admin-nav-mobile .nav-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .admin-nav-mobile .nav-link:hover::before {
+    opacity: 1;
+  }
+
+  .admin-nav-mobile .nav-link svg {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 0.75rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .admin-nav-mobile .nav-link:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(59, 130, 246, 0.15);
+    border-color: rgba(59, 130, 246, 0.3);
+  }
+
+  .admin-nav-mobile .nav-link:hover svg {
+    transform: scale(1.1);
+    color: #3b82f6;
+  }
+
+  .admin-nav-mobile .nav-link.active {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 12px 32px rgba(59, 130, 246, 0.4);
+    border-color: #1d4ed8;
+  }
+
+  .admin-nav-mobile .nav-link.active::before {
+    display: none;
+  }
+
+  .admin-nav-mobile .nav-link.active svg {
+    color: white;
+    transform: scale(1.1);
+  }
+
+  /* Quick actions grid */
+  .quick-actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .quick-action-card {
+    background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .quick-action-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.12);
+  }
+
+  .quick-action-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--action-gradient, linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%));
+  }
+
+  .quick-action-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .quick-action-card:hover .quick-action-icon {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(59, 130, 246, 0.1) 100%);
+  }
+
+  .quick-action-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.75rem;
+  }
+
+  .quick-action-description {
+    font-size: 0.95rem;
+    color: #6b7280;
+    line-height: 1.6;
+  }
+}
+
+/* Small phone optimizations */
+@media (max-width: 575.98px) {
+  .dashboard-container {
+    padding: 0.75rem;
+  }
+
+  .dashboard-header {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .dashboard-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .stat-card {
+    padding: 1.5rem;
+  }
+
+  .stat-card-value {
+    font-size: 2rem;
+  }
+
+  .admin-nav-mobile {
+    padding: 1rem;
+  }
+
+  .admin-nav-mobile .nav-pills {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .admin-nav-mobile .nav-link {
+    min-height: 80px;
+    padding: 1rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .admin-nav-mobile .nav-link svg {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 0.5rem;
+  }
+
+  .quick-actions-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .quick-action-card {
+    padding: 1.5rem;
+  }
+
+  .quick-action-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+  }
+
+  .quick-action-title {
+    font-size: 1.1rem;
+  }
+
+  .quick-action-description {
+    font-size: 0.9rem;
+  }
+}

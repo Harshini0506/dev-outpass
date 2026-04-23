@@ -1,0 +1,283 @@
+/* Gate Pass Application Form Styles */
+
+.gatepass-form-container {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+/* Mobile optimizations */
+@media (max-width: 767.98px) {
+  .gatepass-form-container {
+    padding: 1rem 0;
+    min-height: calc(100vh - 64px); /* Account for mobile navbar height */
+  }
+}
+
+.gatepass-card {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Mobile card adjustments */
+@media (max-width: 767.98px) {
+  .gatepass-card {
+    margin: 0.5rem;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1), 0 5px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+}
+
+.reason-textarea {
+  resize: vertical;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.reason-textarea:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(14, 165, 233, 0.15);
+}
+
+/* Mobile textarea adjustments */
+@media (max-width: 767.98px) {
+  .reason-textarea {
+    min-height: 120px;
+    font-size: 16px !important; /* Prevents zoom on iOS */
+    background: #ffffff !important; /* Force white background */
+    color: #1f2937 !important; /* Ensure text is dark */
+    border: 2px solid #e5e7eb !important;
+    border-radius: 12px;
+    padding: 0.875rem 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  .reason-textarea:focus {
+    transform: none; /* Disable transform on mobile for better stability */
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1) !important;
+    background: #ffffff !important; /* Keep white background on focus */
+    color: #1f2937 !important; /* Ensure text stays dark on focus */
+    border-color: #3b82f6 !important;
+    outline: none;
+  }
+
+  .reason-textarea::placeholder {
+    color: #9ca3af !important;
+    opacity: 1;
+    font-weight: 400;
+  }
+
+  /* All form controls mobile fixes */
+  .form-control,
+  .form-select {
+    background: #ffffff !important;
+    color: #1f2937 !important;
+    border: 2px solid #e5e7eb !important;
+    border-radius: 12px;
+    padding: 0.875rem 1rem;
+    font-size: 16px !important;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .form-control:focus,
+  .form-select:focus {
+    background: #ffffff !important;
+    color: #1f2937 !important;
+    border-color: #3b82f6 !important;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1) !important;
+    outline: none;
+  }
+
+  .form-control::placeholder {
+    color: #9ca3af !important;
+    opacity: 1;
+    font-weight: 400;
+  }
+
+  /* Form labels */
+  .form-label {
+    color: #374151 !important;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.submit-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+}
+
+/* Mobile button improvements */
+@media (max-width: 767.98px) {
+  .submit-button {
+    min-height: 48px;
+    font-size: 16px;
+    padding: 0.75rem 2rem;
+  }
+  
+  .submit-button:hover {
+    transform: none; /* Remove hover transform on mobile */
+  }
+  
+  .submit-button:active {
+    transform: scale(0.98);
+  }
+}
+
+.submit-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.submit-button:hover::before {
+  left: 100%;
+}
+
+.warning-card {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-left: 4px solid #f59e0b;
+}
+
+.info-card {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  border-left: 4px solid #3b82f6;
+}
+
+.floating-label {
+  position: relative;
+}
+
+.floating-label .form-control {
+  padding-top: 1.625rem;
+  padding-bottom: 0.625rem;
+}
+
+.floating-label .form-label {
+  position: absolute;
+  top: 0;
+  left: 0.75rem;
+  height: 100%;
+  padding: 1rem 0.25rem 0;
+  pointer-events: none;
+  border: 1px solid transparent;
+  transform-origin: 0 0;
+  transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.floating-label .form-control:focus ~ .form-label,
+.floating-label .form-control:not(:placeholder-shown) ~ .form-label {
+  opacity: 0.65;
+  transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+}
+
+/* Mobile specific styles */
+@media (max-width: 768px) {
+  .gatepass-form-container {
+    padding: 1rem 0;
+  }
+  
+  .gatepass-card {
+    margin: 1rem;
+    border-radius: 1.5rem;
+  }
+  
+  .reason-textarea {
+    min-height: 100px;
+  }
+  
+  .submit-button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+/* Animation classes */
+.slide-in-up {
+  animation: slideInUp 0.6s ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bounce-in {
+  animation: bounceIn 0.8s ease-out;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Loading state improvements */
+.loading-overlay {
+  position: relative;
+}
+
+.loading-overlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.loading-overlay.loading::after {
+  opacity: 1;
+  pointer-events: all;
+}

@@ -1,0 +1,356 @@
+/* ContactAdmin.css */
+.contact-admin-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.contact-admin-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  overflow: hidden;
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact-admin-header {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+.contact-admin-header h1 {
+  margin: 0 0 10px 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.welcome-text {
+  margin: 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.contact-admin-content {
+  padding: 30px;
+}
+
+.status-info {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border-left: 4px solid #ffc107;
+}
+
+.status-info h2 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 1.4rem;
+}
+
+.status-details p {
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+.pending-role {
+  background: #fff3cd;
+  color: #856404;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.action-required {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #e3f2fd;
+  border-radius: 12px;
+  border-left: 4px solid #2196f3;
+}
+
+.action-required h3 {
+  margin: 0 0 15px 0;
+  color: #1976d2;
+  font-size: 1.3rem;
+}
+
+.next-steps {
+  margin-top: 20px;
+}
+
+.next-steps h4 {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.next-steps ol {
+  padding-left: 20px;
+}
+
+.next-steps li {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.next-steps code {
+  background: #f1f3f4;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  color: #d73527;
+}
+
+.contact-info {
+  padding: 20px;
+  background: #f1f8e9;
+  border-radius: 12px;
+  border-left: 4px solid #4caf50;
+}
+
+.contact-info h3 {
+  margin: 0 0 15px 0;
+  color: #388e3c;
+  font-size: 1.3rem;
+}
+
+.contact-details p {
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+.contact-admin-actions {
+  padding: 20px 30px 30px 30px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.refresh-btn, .home-btn, .logout-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.refresh-btn {
+  background: #4caf50;
+  color: white;
+}
+
+.refresh-btn:hover {
+  background: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+}
+
+.home-btn {
+  background: #2196f3;
+  color: white;
+}
+
+.home-btn:hover {
+  background: #1976d2;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(33, 150, 243, 0.3);
+}
+
+.logout-btn {
+  background: #f44336;
+  color: white;
+}
+
+.logout-btn:hover {
+  background: #da190b;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(244, 67, 54, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-admin-container {
+    padding: 10px;
+  }
+  
+  .contact-admin-header {
+    padding: 20px;
+  }
+  
+  .contact-admin-header h1 {
+    font-size: 2rem;
+  }
+  
+  .contact-admin-content {
+    padding: 20px;
+  }
+  
+  .contact-admin-actions {
+    flex-direction: column;
+    padding: 15px 20px 20px 20px;
+  }
+  
+  .refresh-btn, .home-btn, .logout-btn {
+    width: 100%;
+  }
+}
+
+/* Role Request Form Styles */
+.role-request-form {
+  background: #f8f9fa;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.role-request-form h4 {
+  color: #495057;
+  margin: 0 0 15px 0;
+  font-size: 1.1rem;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.role-select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #dee2e6;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.role-select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.reason-textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #dee2e6;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 80px;
+  transition: all 0.3s ease;
+}
+
+.reason-textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.request-role-btn {
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.request-role-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #218838, #1db584);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+}
+
+.request-role-btn:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.request-submitted {
+  background: #d4edda;
+  border: 2px solid #c3e6cb;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.success-message {
+  color: #155724;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.request-submitted p {
+  color: #155724;
+  margin: 10px 0;
+}
+
+.polling-indicator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #155724;
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: #28a745;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

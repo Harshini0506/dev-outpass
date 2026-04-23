@@ -1,0 +1,289 @@
+/* Layout Component Styles */
+
+.navbar {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+}
+
+.navbar-brand {
+  transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
+}
+
+.nav-link {
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+  border-radius: 2rem;
+  margin: 0 0.25rem;
+}
+
+.nav-link:hover {
+  background-color: rgba(14, 165, 233, 0.1);
+  transform: translateY(-1px);
+}
+
+.nav-link.active {
+  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+}
+
+/* Mobile navigation styles */
+.mobile-nav {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  margin-top: 0.5rem;
+  overflow: hidden;
+}
+
+.mobile-nav .nav-link {
+  padding: 1rem 1.5rem;
+  border-radius: 0;
+  margin: 0;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+}
+
+.mobile-nav .nav-link:last-child {
+  border-bottom: none;
+}
+
+.mobile-nav .nav-link:hover {
+  background-color: rgba(14, 165, 233, 0.05);
+  transform: none;
+}
+
+.mobile-nav .nav-link.active {
+  background: linear-gradient(90deg, rgba(14, 165, 233, 0.1) 0%, rgba(14, 165, 233, 0.05) 100%);
+  border-left: 4px solid #0ea5e9;
+  color: #0ea5e9 !important;
+  box-shadow: none;
+}
+
+/* User profile section */
+.user-profile {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.user-avatar {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.logout-btn {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  border: none;
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.2);
+}
+
+.logout-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+}
+
+/* Mobile menu toggle */
+.mobile-menu-toggle {
+  border: 2px solid #e2e8f0;
+  background: white;
+  color: #64748b;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-toggle:hover {
+  border-color: #0ea5e9;
+  color: #0ea5e9;
+  background: rgba(14, 165, 233, 0.05);
+}
+
+.mobile-menu-toggle:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+}
+
+/* Brand logo animation */
+.brand-logo {
+  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+  transition: all 0.3s ease;
+}
+
+.brand-logo:hover {
+  transform: rotate(5deg) scale(1.1);
+  box-shadow: 0 8px 20px rgba(14, 165, 233, 0.4);
+}
+
+/* Navigation icons */
+.nav-icon {
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover .nav-icon {
+  transform: scale(1.1);
+}
+
+.nav-link.active .nav-icon {
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+}
+
+/* Responsive improvements */
+@media (max-width: 991.98px) {
+  .navbar {
+    padding: 0.75rem 1rem;
+  }
+  
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+  
+  .mobile-nav {
+    animation: slideDown 0.3s ease-out;
+  }
+  
+  /* Better touch targets for mobile */
+  .nav-link {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .container-fluid {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Improved mobile card layouts */
+  .card {
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+  
+  /* Better button spacing on mobile */
+  .btn {
+    min-height: 44px;
+    padding: 0.75rem 1rem;
+  }
+  
+  .btn-sm {
+    min-height: 36px;
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .navbar {
+    padding: 0.5rem 0.75rem;
+  }
+  
+  .user-profile {
+    padding: 0.75rem;
+  }
+  
+  .brand-logo {
+    width: 32px;
+    height: 32px;
+  }
+  
+  /* Stack buttons vertically on small screens */
+  .d-flex.gap-2 {
+    flex-direction: column;
+    gap: 0.5rem !important;
+  }
+  
+  .d-flex.gap-3 {
+    flex-direction: column;
+    gap: 0.75rem !important;
+  }
+  
+  /* Full width buttons on mobile */
+  .btn-group-mobile .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Better table responsiveness */
+  .table-responsive {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table {
+    font-size: 0.875rem;
+  }
+  
+  .table th,
+  .table td {
+    padding: 0.5rem;
+    white-space: nowrap;
+  }
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Main content container */
+.main-content {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%);
+  min-height: calc(100vh - 80px);
+}
+
+/* Sticky header improvements */
+.sticky-top {
+  backdrop-filter: blur(10px);
+  z-index: 1020;
+}
+
+/* Dark mode support (future enhancement) */
+@media (prefers-color-scheme: dark) {
+  .navbar {
+    background: rgba(15, 23, 42, 0.95) !important;
+    border-bottom-color: rgba(71, 85, 105, 0.5);
+  }
+  
+  .mobile-nav {
+    background: #1e293b;
+    color: white;
+  }
+  
+  .user-profile {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    border-color: rgba(71, 85, 105, 0.8);
+  }
+}

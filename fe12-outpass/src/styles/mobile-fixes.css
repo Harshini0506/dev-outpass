@@ -1,0 +1,458 @@
+/* Mobile Text Visibility & Alignment Fixes */
+
+/* Admin Panel Mobile Fixes - Prevent oversized text */
+@media (max-width: 767.98px) {
+  /* Admin panel specific fixes */
+  .admin-dashboard h1,
+  .admin-dashboard .h1,
+  .admin-title {
+    font-size: 1.5rem !important;
+    line-height: 1.2;
+  }
+
+  .admin-dashboard h2,
+  .admin-dashboard .h2,
+  .admin-subtitle {
+    font-size: 1.25rem !important;
+    line-height: 1.3;
+  }
+
+  .admin-dashboard h3,
+  .admin-dashboard .h3 {
+    font-size: 1.1rem !important;
+    line-height: 1.4;
+  }
+
+  .admin-dashboard .fs-1 {
+    font-size: 1.5rem !important;
+  }
+
+  .admin-dashboard .fs-2 {
+    font-size: 1.25rem !important;
+  }
+
+  .admin-dashboard .fs-3 {
+    font-size: 1.1rem !important;
+  }
+
+  .admin-dashboard .fs-4 {
+    font-size: 1rem !important;
+  }
+
+  .admin-dashboard .display-1,
+  .admin-dashboard .display-2,
+  .admin-dashboard .display-3,
+  .admin-dashboard .display-4,
+  .admin-dashboard .display-5,
+  .admin-dashboard .display-6 {
+    font-size: 1.25rem !important;
+  }
+
+  /* Admin components mobile fixes */
+  .admin-dashboard .card-title {
+    font-size: 1.1rem !important;
+  }
+
+  .admin-dashboard .card-text {
+    font-size: 0.9rem !important;
+  }
+
+  .admin-dashboard .btn {
+    font-size: 0.875rem !important;
+    padding: 0.5rem 1rem !important;
+  }
+
+  /* Admin table responsive */
+  .admin-dashboard .table {
+    font-size: 0.85rem !important;
+  }
+
+  .admin-dashboard .table th {
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+  }
+
+  /* Admin stats cards */
+  .admin-dashboard .stats-card .display-4,
+  .admin-dashboard .stats-card .display-3,
+  .admin-dashboard .stats-card .display-2,
+  .admin-dashboard .stats-card .display-1 {
+    font-size: 1.75rem !important;
+  }
+
+/* Ensure all mobile navigation text is visible */
+  /* Force text colors in mobile navigation */
+  .mobile-nav .nav-link,
+  .mobile-nav .nav-link * {
+    color: #374151 !important;
+  }
+
+  .mobile-nav .nav-link:hover,
+  .mobile-nav .nav-link:hover * {
+    color: #1d4ed8 !important;
+  }
+
+  .mobile-nav .nav-link.active,
+  .mobile-nav .nav-link.active * {
+    color: #1d4ed8 !important;
+  }
+
+  /* User info section in mobile nav */
+  .mobile-nav .d-flex .fw-semibold,
+  .mobile-nav-user .user-name {
+    color: #1f2937 !important;
+  }
+
+  .mobile-nav .d-flex .small,
+  .mobile-nav-user .user-role {
+    color: #6b7280 !important;
+  }
+
+  /* Fix form controls across the app */
+  .form-control,
+  .form-select,
+  textarea,
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    background: #ffffff !important;
+    color: #1f2937 !important;
+    border: 2px solid #e5e7eb !important;
+  }
+
+  .form-control:focus,
+  .form-select:focus,
+  textarea:focus,
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    background: #ffffff !important;
+    color: #1f2937 !important;
+    border-color: #3b82f6 !important;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1) !important;
+  }
+
+  /* Fix text visibility in boxes/cards */
+  .card,
+  .card-body,
+  .card-header,
+  .modal-body,
+  .modal-header {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+  }
+
+  .card .text-muted,
+  .modal .text-muted {
+    color: #6b7280 !important;
+  }
+
+  .card .text-dark,
+  .modal .text-dark {
+    color: #1f2937 !important;
+  }
+
+  .card h1, .card h2, .card h3, .card h4, .card h5, .card h6,
+  .modal h1, .modal h2, .modal h3, .modal h4, .modal h5, .modal h6 {
+    color: #1f2937 !important;
+  }
+
+  .card p, .card span, .card div,
+  .modal p, .modal span, .modal div {
+    color: #374151 !important;
+  }
+
+  /* Dashboard cards text visibility */
+  .dashboard-card,
+  .dashboard-card * {
+    color: #1f2937 !important;
+  }
+
+  .dashboard-card .card-title,
+  .dashboard-card .card-text {
+    color: #1f2937 !important;
+  }
+
+  /* Stats cards */
+  .stats-card,
+  .stats-card * {
+    color: #1f2937 !important;
+  }
+
+  .stats-card .display-4,
+  .stats-card .h1,
+  .stats-card .h2,
+  .stats-card .h3 {
+    color: #1f2937 !important;
+  }
+
+  /* Placeholder text */
+  ::placeholder {
+    color: #9ca3af !important;
+    opacity: 1;
+  }
+
+  /* Modal text visibility */
+  .modal-body .form-control,
+  .modal-body textarea {
+    background: #ffffff !important;
+    color: #1f2937 !important;
+  }
+
+  .modal-header .modal-title {
+    color: #1f2937 !important;
+    font-size: 1.125rem !important;
+  }
+
+  .modal-body p,
+  .modal-body span,
+  .modal-body div {
+    color: #374151 !important;
+  }
+
+  /* General mobile text sizing controls */
+  body {
+    font-size: 16px !important;
+  }
+
+  .container,
+  .container-fluid {
+    font-size: 16px !important;
+  }
+
+  /* Prevent text from becoming invisible */
+  * {
+    color: inherit !important;
+  }
+
+  body,
+  .container,
+  .container-fluid,
+  .main,
+  main {
+    color: #374151 !important;
+  }
+
+  /* Specific targeting for common invisible text issues */
+  .text-white {
+    background: rgba(0, 0, 0, 0.1) !important;
+    padding: 0.25rem 0.5rem !important;
+    border-radius: 4px !important;
+  }
+
+  /* Card text improvements */
+  .card .text-muted {
+    color: #6b7280 !important;
+  }
+
+  .card .text-dark {
+    color: #1f2937 !important;
+  }
+
+  /* Alert improvements */
+  .alert {
+    border: none;
+    border-radius: 14px;
+    margin-bottom: 1.25rem;
+    padding: 1rem 1.25rem;
+    font-weight: 500;
+  }
+
+  .alert-warning {
+    background: rgba(245, 158, 11, 0.1) !important;
+    color: #92400e !important;
+    border-left: 4px solid #f59e0b;
+  }
+
+  .alert-danger {
+    background: rgba(239, 68, 68, 0.1) !important;
+    color: #991b1b !important;
+    border-left: 4px solid #ef4444;
+  }
+
+  .alert-success {
+    background: rgba(16, 185, 129, 0.1) !important;
+    color: #047857 !important;
+    border-left: 4px solid #10b981;
+  }
+
+  .alert-info,
+  .alert-primary {
+    background: rgba(59, 130, 246, 0.1) !important;
+    color: #1e40af !important;
+    border-left: 4px solid #3b82f6;
+  }
+
+  /* Button text visibility */
+  .btn-primary {
+    color: #ffffff !important;
+  }
+
+  .btn-secondary {
+    color: #ffffff !important;
+  }
+
+  .btn-success {
+    color: #ffffff !important;
+  }
+
+  .btn-danger {
+    color: #ffffff !important;
+  }
+
+  .btn-outline-primary {
+    color: #3b82f6 !important;
+  }
+
+  .btn-outline-primary:hover {
+    color: #ffffff !important;
+  }
+
+  /* Nav link text in regular navbar */
+  .navbar-nav .nav-link {
+    color: #374151 !important;
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #1d4ed8 !important;
+  }
+
+  .navbar-nav .nav-link.active {
+    color: #1d4ed8 !important;
+  }
+
+  /* Dropdown menu improvements */
+  .dropdown-menu {
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    padding: 0.75rem 0;
+  }
+
+  .dropdown-item {
+    padding: 0.75rem 1.25rem;
+    color: #374151 !important;
+    font-weight: 500;
+  }
+
+  .dropdown-item:hover,
+  .dropdown-item:focus {
+    background: rgba(59, 130, 246, 0.1) !important;
+    color: #1d4ed8 !important;
+  }
+
+  /* Table text visibility */
+  .table {
+    color: #374151 !important;
+  }
+
+  .table th {
+    color: #1f2937 !important;
+  }
+
+  .table td {
+    color: #374151 !important;
+  }
+
+  /* Fix any remaining text visibility issues */
+  .text-white {
+    color: #ffffff !important;
+  }
+
+  .text-muted {
+    color: #6b7280 !important;
+  }
+
+  .text-dark {
+    color: #1f2937 !important;
+  }
+
+  .text-primary {
+    color: #3b82f6 !important;
+  }
+
+  .text-secondary {
+    color: #6b7280 !important;
+  }
+
+  .text-success {
+    color: #059669 !important;
+  }
+
+  .text-danger {
+    color: #dc2626 !important;
+  }
+
+  .text-warning {
+    color: #d97706 !important;
+  }
+
+  /* Badge text improvements */
+  .badge {
+    color: #ffffff !important;
+    font-weight: 600;
+  }
+
+  /* Loading spinner improvements */
+  .spinner-border {
+    color: #3b82f6 !important;
+  }
+
+  /* Breadcrumb improvements */
+  .breadcrumb {
+    background: rgba(248, 250, 252, 0.8);
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .breadcrumb-item {
+    color: #6b7280 !important;
+  }
+
+  .breadcrumb-item.active {
+    color: #1f2937 !important;
+  }
+
+  .breadcrumb-item + .breadcrumb-item::before {
+    color: #9ca3af !important;
+  }
+}
+
+/* High contrast mode improvements */
+@media (prefers-contrast: high) {
+  .form-control,
+  .form-select,
+  textarea {
+    border-width: 3px !important;
+    border-color: #1f2937 !important;
+  }
+
+  .form-control:focus,
+  .form-select:focus,
+  textarea:focus {
+    border-color: #3b82f6 !important;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3) !important;
+  }
+}
+
+/* Dark mode compatibility (if user has dark mode) */
+@media (prefers-color-scheme: dark) {
+  @media (max-width: 767.98px) {
+    /* Keep forms light even in dark mode for better readability */
+    .form-control,
+    .form-select,
+    textarea {
+      background: #ffffff !important;
+      color: #1f2937 !important;
+      border-color: #d1d5db !important;
+    }
+
+    .form-control:focus,
+    .form-select:focus,
+    textarea:focus {
+      background: #ffffff !important;
+      color: #1f2937 !important;
+      border-color: #3b82f6 !important;
+    }
+  }
+}

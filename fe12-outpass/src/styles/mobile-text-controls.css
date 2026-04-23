@@ -1,0 +1,151 @@
+/* Mobile Responsive Text Size Controls */
+@media (max-width: 767.98px) {
+  /* Prevent oversized text globally */
+  html {
+    font-size: 16px !important;
+  }
+
+  body {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Control heading sizes */
+  h1, .h1 {
+    font-size: 1.75rem !important;
+  }
+
+  h2, .h2 {
+    font-size: 1.5rem !important;
+  }
+
+  h3, .h3 {
+    font-size: 1.25rem !important;
+  }
+
+  h4, .h4 {
+    font-size: 1.1rem !important;
+  }
+
+  h5, .h5 {
+    font-size: 1rem !important;
+  }
+
+  h6, .h6 {
+    font-size: 0.9rem !important;
+  }
+
+  /* Control display classes */
+  .display-1 {
+    font-size: 2rem !important;
+  }
+
+  .display-2 {
+    font-size: 1.75rem !important;
+  }
+
+  .display-3 {
+    font-size: 1.5rem !important;
+  }
+
+  .display-4 {
+    font-size: 1.25rem !important;
+  }
+
+  .display-5 {
+    font-size: 1.1rem !important;
+  }
+
+  .display-6 {
+    font-size: 1rem !important;
+  }
+
+  /* Font size utility classes */
+  .fs-1 {
+    font-size: 1.75rem !important;
+  }
+
+  .fs-2 {
+    font-size: 1.5rem !important;
+  }
+
+  .fs-3 {
+    font-size: 1.25rem !important;
+  }
+
+  .fs-4 {
+    font-size: 1.1rem !important;
+  }
+
+  .fs-5 {
+    font-size: 1rem !important;
+  }
+
+  .fs-6 {
+    font-size: 0.9rem !important;
+  }
+
+  /* Specific component text sizes */
+  .card-title {
+    font-size: 1.125rem !important;
+  }
+
+  .card-text {
+    font-size: 0.95rem !important;
+  }
+
+  .btn {
+    font-size: 0.9rem !important;
+  }
+
+  /* Table text sizes */
+  .table {
+    font-size: 0.85rem !important;
+  }
+
+  .table th {
+    font-size: 0.8rem !important;
+  }
+
+  /* Modal text sizes */
+  .modal-title {
+    font-size: 1.125rem !important;
+  }
+
+  .modal-body {
+    font-size: 0.95rem !important;
+  }
+}
+
+/* Additional text visibility fixes */
+@media (max-width: 767.98px) {
+  /* Ensure consistent text color inheritance */
+  .card,
+  .modal,
+  .dropdown-menu,
+  .alert {
+    color: #374151 !important;
+  }
+
+  .card *,
+  .modal *,
+  .dropdown-menu *,
+  .alert * {
+    color: inherit !important;
+  }
+
+  /* Override any transparent or invisible text */
+  .text-transparent,
+  .invisible-text {
+    color: #374151 !important;
+    opacity: 1 !important;
+  }
+
+  /* Fix any white text on light backgrounds */
+  .text-white {
+    color: #1f2937 !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    padding: 0.25rem 0.5rem !important;
+    border-radius: 4px !important;
+  }
+}
