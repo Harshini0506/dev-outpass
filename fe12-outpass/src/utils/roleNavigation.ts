@@ -9,7 +9,8 @@ export const getRoleDashboard = (role: Role): string => {
     'STUDENT': '/student/status',
     'MENTOR': '/mentor',
     'SECURITY': '/security',
-    'HOD': '/hod'
+    'HOD': '/hod',
+    'PENDING': '/'
   };
   
   return roleRoutes[role];
@@ -23,7 +24,8 @@ export const getRoleRoutes = (role: Role): string[] => {
     'STUDENT': ['/', '/apply', '/student/status'],
     'MENTOR': ['/', '/mentor'],
     'SECURITY': ['/', '/security'],
-    'HOD': ['/', '/hod', '/admin']
+    'HOD': ['/', '/hod', '/admin'],
+    'PENDING': ['/']
   };
   
   return routes[role] || ['/'];
